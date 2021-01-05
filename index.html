@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl@1/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@1/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/map/js/world.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@4/dist/extension/bmap.min.js"></script>
+       <script src="./papaparse.min.js"></script>
+       <link rel="stylesheet" type="text/css" href="./style.css">
+   </head>
+   <body >
+       <div class="file">
+         <span>回测文件:</span>
+         <input id="file" class="picker_input" type="file"  name="file" onchange="loadData()" multiple="multiple"/>
+       </div>
+       <table class="">
+           <tr id="list">
+           </tr>
+       </table>
+       <div class="from">
+         <div class="item">
+           <div class="label">时间:</div>
+           <input type="text" id="time"  value="candle_begin_time"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">高:</div>
+           <input type="text" id="high"  value="high"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">低:</div>
+           <input type="text" id="low"  value="low"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">开:</div>
+           <input type="text" id="open"  value="open"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">收:</div>
+           <input type="text" id="close"  value="close"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">成交量:</div>
+           <input type="text" id="volume"  value="volume"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">上轨:</div>
+           <input type="text" id="upper"  value="upper"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">中轨:</div>
+           <input type="text" id="median"  value="median"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">下轨:</div>
+           <input type="text" id="lower"  value="lower"  class="picker_input">
+         </div>
+         <div class="item">
+           <div class="label">买卖信号:</div>
+           <input type="text" id="signal"  value="signal"  class="picker_input">
+         </div>
+       </div>
+       <div class="button-frame">
+           <button class="button" onclick="loadData()">刷新</button>
+       </div>
+       <div id="container" style="height: 98vh;width: 98vw;"></div>
+       <script src="./charts.js"></script>
+   </body>
+</html>

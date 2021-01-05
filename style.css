@@ -1,0 +1,63 @@
+.file {
+    margin: 20px 40px;
+}
+.picker_input{
+    margin-left: 10px;
+    height: 30px;
+    width: 200px;
+    display: inline-block;
+    border-radius: 5px;
+    padding-left: 10px;
+    border-color: #00B7FF;
+}
+.from{
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.button-frame{
+    width: 100%;
+    text-align: center;
+}
+.button{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.item{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+}
+.label{
+    margin-top: 5px;
+    text-align: right;
+    width: 100px;
+}
+table {
+    margin-top: 20px;
+    width: 90%;
+    background: #ccc;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+th,td {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+th {
+    background: #eee;
+    font-weight: normal;
+}
+tr {
+    background: #fff;
+}
